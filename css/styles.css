@@ -4,7 +4,8 @@
 
 body {
   font-family: 'Inter UI', 'SF UI', Helvetica, Arial, sans-serif;
-  font-size: 2.4em; }
+  font-size: 2.4em;
+  /**  DESKTOP VERSION **/ }
   body h1 {
     font-weight: 900;
     font-size: 3em;
@@ -64,12 +65,39 @@ body {
         grid-area: d; }
     body.grid .presentacion {
       padding-top: 96px; }
-  body footer {
+  body footer .padded {
+    padding: 48px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 24px; }
-    body footer div {
+    body footer .padded div {
       text-align: center;
       margin-bottom: 48pxa; }
-    body footer .patrocina {
+    body footer .padded .patrocina {
       text-align: right; }
+  @media only screen and (min-device-width: 768px) {
+    body {
+      font-size: 1.2em; }
+      body .padded {
+        max-width: 1000px;
+        margin: 0 auto; }
+      body h1 {
+        font-size: 7em; }
+      body .ponenteBlock {
+        display: grid;
+        grid-template-columns: 96px 1fr;
+        grid-column-gap: 24px;
+        margin-bottom: 72px; }
+        body .ponenteBlock .avatar {
+          width: 96px;
+          height: 96px;
+          border-radius: 100%;
+          grid-column: 1/2;
+          grid-row: 1/2; }
+        body .ponenteBlock .ponenteInfo {
+          padding-top: 12px;
+          grid-column: 2/3;
+          grid-row: 1/2; }
+          body .ponenteBlock .ponenteInfo h3 {
+            margin: 0 0 12px 0;
+            font-size: 1.8em; } }
