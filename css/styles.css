@@ -1,0 +1,6 @@
+@import url("https://rsms.me/inter/inter-ui.css");
+body {
+  font-family: 'Inter UI', 'SF UI', Helvetica, Arial, sans-serif; }
+  body.grid {
+    margin: 0 auto;
+    max-width: 400px; }
