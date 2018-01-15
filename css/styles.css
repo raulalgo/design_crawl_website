@@ -1,10 +1,46 @@
 @import url("https://rsms.me/inter/inter-ui.css");
+.padded {
+  padding: 48px; }
+
 body {
   font-family: 'Inter UI', 'SF UI', Helvetica, Arial, sans-serif;
-  font-size: 2.4em;
-  padding: 48pt; }
+  font-size: 2.4em; }
+  body h1 {
+    font-weight: 900;
+    font-size: 3em;
+    grid-area: h;
+    letter-spacing: -0.03em; }
+  body h2 {
+    font-size: 2em; }
+  body h4 {
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.05em; }
+  body .ponenteBlock {
+    display: grid;
+    grid-template-columns: 144px 1fr;
+    grid-column-gap: 48px;
+    margin-bottom: 72px; }
+    body .ponenteBlock .avatar {
+      width: 144px;
+      height: 144px;
+      border-radius: 100%;
+      background-color: #999;
+      grid-column: 1/2;
+      grid-row: 1/2; }
+    body .ponenteBlock .ponenteInfo {
+      grid-column: 2/3;
+      grid-row: 1/2; }
+      body .ponenteBlock .ponenteInfo h3 {
+        margin: 0 0 12px 0;
+        font-size: 1.8em; }
   body.grid {
     margin: 0 auto; }
+    body.grid .pageOne {
+      height: 100vh; }
+    body.grid .negative {
+      background-color: #000;
+      color: #fff; }
     body.grid header {
       display: grid;
       grid-template-rows: 240px 240px 240px;
@@ -21,12 +57,19 @@ body {
         body.grid header .anteTitulo .ubicacion {
           grid-area: u;
           text-align: right; }
-      body.grid header h1 {
-        font-weight: black;
-        font-size: 2.8em;
-        grid-area: h; }
       body.grid header .divider {
         background-color: #000;
         height: 24px;
         width: 360px;
         grid-area: d; }
+    body.grid .presentacion {
+      padding-top: 96px; }
+  body footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 24px; }
+    body footer div {
+      text-align: center;
+      margin-bottom: 48px; }
+    body footer .patrocina {
+      text-align: right; }

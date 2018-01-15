@@ -1,11 +1,75 @@
 @import url('https://rsms.me/inter/inter-ui.css');
 
+$white:#fff;
+$black: #000;
+$grey:#999; 
+$DOSblue: #2a9dd6;
+$DOSyellow: #ffd658;
+
+.padded {
+    padding: 48px;
+}
+
 body {
     font-family: 'Inter UI', 'SF UI', Helvetica, Arial, sans-serif;
     font-size: 2.4em;
-    padding: 48pt;
+
+    h1{
+        font-weight: 900;
+        font-size: 3em;
+        grid-area: h;
+        letter-spacing: -0.03em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    h4 {
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        
+    }
+
+    .ponenteBlock {
+
+        display: grid;
+        grid-template-columns: 144px 1fr;
+        grid-column-gap: 48px;
+        margin-bottom: 72px;
+
+        .avatar {
+            width: 144px;
+            height: 144px;
+            border-radius: 100%;
+            background-color: $grey;
+            grid-column: 1/2;
+            grid-row: 1/2; 
+        }
+
+        .ponenteInfo {
+            grid-column: 2/3;
+            grid-row: 1/2;
+
+            h3 {
+                margin: 0 0 12px 0;
+                font-size: 1.8em;
+            }
+        }
+    }
+
     &.grid {
         margin: 0 auto;
+
+        .pageOne { 
+            height: 100vh;
+        }
+
+        .negative {
+            background-color: $black;
+            color: $white;
+        }
 
         header{
             display: grid;
@@ -30,18 +94,34 @@ body {
                 }
             }
 
-            h1{
-                font-weight: black;
-                font-size: 2.8em;
-                grid-area: h;
-            }
-
             .divider{
                 background-color: #000;
                 height: 24px;
                 width: 360px;
                 grid-area: d;
             }
+
+           
+        }
+
+        .presentacion {
+            padding-top: 96px;
+        }
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 24px;
+        
+
+        div {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        
+        .patrocina {
+            text-align: right;
         }
     }
 }
