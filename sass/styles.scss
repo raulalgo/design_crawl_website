@@ -2,9 +2,46 @@
 
 body {
     font-family: 'Inter UI', 'SF UI', Helvetica, Arial, sans-serif;
-
+    font-size: 2.4em;
+    padding: 48pt;
     &.grid {
         margin: 0 auto;
-        max-width: 400px;
+
+        header{
+            display: grid;
+            grid-template-rows: 240px 240px 240px;
+            grid-template: "a a a a"
+                           "h h h h"
+                           "d x x x";
+            .anteTitulo{
+                font-size: 0.8em;
+                font-weight: bold;
+                grid-area: a;
+                display: grid; 
+                grid-template-columns: 1fr 1fr;
+                grid-template: "f u";
+
+                .fecha {
+                    grid-area: f;
+                }
+                .ubicacion {
+                    grid-area: u;
+                    text-align: right;
+                }
+            }
+
+            h1{
+                font-weight: black;
+                font-size: 2.8em;
+                grid-area: h;
+            }
+
+            .divider{
+                background-color: #000;
+                height: 24px;
+                width: 360px;
+                grid-area: d;
+            }
+        }
     }
 }
